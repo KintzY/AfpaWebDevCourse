@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABI, Active Bretagne Informatique, Yann</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="navbar">
+          <img class="logo" src="ABI-Logo.png" alt="Logo ABI" />
+          <div class="navbar-right">
+            <a href="#home">Accueil</a>
+            <a href="#project">Projets</a>
+            <a href="#collab">Collaborateurs</a>
+            <div class="dropdown">
+              <a href="#manage">Commerciale</a>
+              <div class="dropdown-content">
+                <a class="active" href="gestion.html">Gestion Client</a>
+                <a href="client.html">Liste des clients</a>
+                <a href="contact.html">Contact Clients</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a href="#about">A Propos</a>
+              <div class="dropdown-content">
+                <a href="#news">Actualité</a>
+                <a href="#contact">Contact</a>
+              </div>
+            </div>
+
+            <div class="login-container">
+              <form>
+                <input type="email" placeholder="Adresse mail" name="username" />
+                <input type="password" placeholder="Mot de passe" name="psw" />
+                <button type="submit">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="main-section">
+        <h1 class="title-list">Gestion Des Clients</h1>
+        <input type="text" id="search-table" placeholder="Chercher dans la liste" />
+        <button id="button-add">Ajouter Client</button>
+        <table id="customers">
+          <thead>
+          <tr>
+            <!-- input pour saisir les donné a entré dans le tableau -->
+            <td><input id="name" type="text" placeholder="Client" /></td>
+            <td><input id="type" type="text" placeholder="Type" /></td>
+            <td><input id="domaine" type="text" placeholder="Domaine" /></td>
+            <td><input id="adresse" type="text" placeholder="Adresse" /></td>
+            <td><input id="contact" type="email" placeholder="contact@email.com" /></td>
+            <td><input id="nature" type="text" placeholder="Nature" /></td>
+            <td>
+              <input id="chiffre-affaire" type="number" placeholder="Chiffre d'affaire" />
+            </td>
+            <td>
+              <input id="effectif" type="number" placeholder="Effectifs" />
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>Client</th>
+            <th>Type</th>
+            <th>Domaine</th>
+            <th>Adresse</th>
+            <th>Contact</th>
+            <th>Nature</th>
+            <th>Chiffre d'affaire</th>
+            <th>Effectifs</th>
+            <th>Del</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Acme inc.</td>
+            <td>Privé</td>
+            <td>Industrie</td>
+            <td>USA</td>
+            <td><a href="mailto:acme@usa.com">acme@usa.com</a></td>
+            <td>Secondaire</td>
+            <td>n/a</td>
+            <td>n/a</td>
+            <td><input class="delete-button" type="button" value="&#10060;" onClick="Javacsript:deleteRow(this)" /></td>
+          </tr>
+          <tr>
+            <td>Placeholder corp.</td>
+            <td>Privé</td>
+            <td>Agricole</td>
+            <td>Canada</td>
+            <td><a href="mailto:placeholder@canada.ca">placeholder@canada.ca</a></td>
+            <td>Primaire</td>
+            <td>n/a</td>
+            <td>n/a</td>
+            <td><input class="delete-button" type="button" value="&#10060;" onClick="Javacsript:deleteRow(this)" /></td>
+          </tr>
+          <tr>
+            <td>Template LLC</td>
+            <td>Privé</td>
+            <td>Technologie</td>
+            <td>Angleterre</td>
+            <td><a href="mailto:template@unitedkingdom.uk">template@unitedkingdom.uk</a></td>
+            <td>Tertiaire</td>
+            <td>n/a</td>
+            <td>n/a</td>
+            <td><input class="delete-button" type="button" value="&#10060;" onClick="Javacsript:deleteRow(this)" /></td>
+          </tr>
+        </tbody>
+        </table>
+      </section>
+
+      <footer>
+        <a href="">Plan du site</a>
+        <a href="">Information Légale</a>
+        <a href="">Webmaster</a>
+        <a href="">FAQ</a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

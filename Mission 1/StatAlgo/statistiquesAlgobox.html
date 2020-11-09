@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Variables
+      var nombreSaisie = prompt();
+      var nb_somme = 0;//parseInt(nombreSaisie);
+      var nb_moyenne = 0;
+      var nb_total = 0;
+      var nb_min = nombreSaisie;
+      var nb_max = nombreSaisie;
+
+      //var valeurSaisieE = parseInt(prompt("Tapez le nombre 0 ! "));
+
+      // Loop "While" condition pour sortir de la boucle "tapez 0"
+      while (nombreSaisie != 0) {
+
+        nb_somme += parseFloat(nombreSaisie);
+        nb_total++;
+
+        if (nombreSaisie < nb_min) {
+          nb_min = nombreSaisie;
+        }
+
+        if (nombreSaisie > nb_max) {
+          nb_max = nombreSaisie;
+        }
+
+        nombreSaisie = prompt();
+       
+      }
+
+      nb_moyenne = nb_somme / nb_total;
+
+      alert("minimum :" + nb_min); // en trouve le minimum
+      alert("maximum :" + nb_max); // et le maximum
+      alert("somme :" + nb_somme);
+      alert("moyenne :" + nb_moyenne);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algotithm Statistique</title>
+    <!--script src="https://unpkg.com/mathjs@7.5.1/dist/math.min.js"></script-->  <!--Math.js--> 
+  </head>
+  <body>
+    <script>
+      var i = 0;                                                // Initialise l'indexeur
+      var nombreSaisie = prompt();                              // Stock les nombres entré en variable
+      var sum = parseInt(nombreSaisie);                         // Initialise la varible de somme total
+      var listeDeNombreSaisie = [nombreSaisie];                 // Initialise la liste des nombres entré
+      var nombreMin = parseInt(nombreSaisie);
+      var nombreMax = parseInt(nombreSaisie);
+
+      do  {   
+                                    // Début de la boucle pour stocké les nombres dans la liste
+        nombreSaisie = prompt();                                // La prompt réapparait tant que 0 n'est pas entré
+        listeDeNombreSaisie.push(nombreSaisie);                 // Entre les valeur saisie dans la liste
+
+        if (nombreSaisie < nombreMin) {
+          nombreMin = nombreSaisie;
+        }
+
+        if (nombreSaisie > nombreMax) {
+          nombreMax = nombreSaisie;
+        }
+
+        sum += parseInt(nombreSaisie);                          // Ajoute en même temps les valeurs entré à la somme total
+        i++;                                                    // Incrémente de 1 l'indexeur
+      } while (nombreSaisie != 0);
+
+      //listeDeNombreSaisie.pop();                                // Sort la derniere entré (soit, le 0) de la liste
+
+      alert(listeDeNombreSaisie);                               // Fait apparaitre la liste des valeurs entré
+      //alert("minimum :" + Math.min(...listeDeNombreSaisie));    // en trouve le minimum
+      //alert("maximum :" + Math.max(...listeDeNombreSaisie));    // et le maximum
+
+      //alert("sum :" + math.sum(listeDeNombreSaisie));         // Utilise la fonction de Math.js
+      //alert("median :" + math.median(listeDeNombreSaisie));
+
+      alert("min:" + nombreMin);
+      alert("max:" + nombreMax);
+      alert("somme :" + sum);                                   // Fait apparaitre la somme
+      alert("moyenne :" + sum / i);                             // Fait apparaitre la moyenne en divisant la somme par l'indexeur
+    </script>
+  </body>
+</html>

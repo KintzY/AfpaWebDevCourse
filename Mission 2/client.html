@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABI, Active Bretagne Informatique, Sabrina</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="navbar">
+          <img class="logo" src="ABI-Logo.png" alt="Logo ABI" />
+          <div class="navbar-right">
+            <a href="#home">Accueil</a>
+            <a href="#project">Projets</a>
+            <a href="#collab">Collaborateurs</a>
+            <div class="dropdown">
+              <a href="#manage">Commerciale</a>
+              <div class="dropdown-content">
+                <a href="gestion.html">Gestion Client</a>
+                <a class="active" href="client.html">Liste des clients</a>
+                <a href="contact.html">Contact Clients</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a href="#about">A Propos</a>
+              <div class="dropdown-content">
+                <a href="#news">Actualité</a>
+                <a href="#contact">Contact</a>
+              </div>
+            </div>
+
+            <div class="login-container">
+              <form>
+                <input type="email" placeholder="Adresse mail" name="username" />
+                <input type="password" placeholder="Mot de passe" name="psw" />
+                <button type="submit">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="main-section">
+        <h1 class="title-list">Liste des Clients</h1>
+        <input type="text" id="search-table" placeholder="Chercher dans la liste" />
+        <button id="button-add">Ajouter Client</button>
+        <table id="customers">
+          <tr>
+            <th>Client</th>
+            <th>Type</th>
+            <th>Domaine</th>
+            <th>Adresse</th>
+            <th>Email</th>
+            <th>Chiffre d'affaire</th>
+            <th>Effectifs</th>
+            <th>Contact</th>
+          </tr>
+          <tr>
+            <td>ACME INC.</td>
+            <td>Privé</td>
+            <td>Industrie</td>
+            <td>USA</td>
+            <td>acme@usa.com</td>
+            <td>n/a</td>
+            <td>n/a</td>
+            <td><a href="contact.html">Contact</a></td>
+          </tr>
+          <tr>
+            <td>CALUMET</td>
+            <td>Privé</td>
+            <td>Industrie</td>
+            <td>UK</td>
+            <td>calumet@usa.com</td>
+            <td>n/a</td>
+            <td>n/a</td>
+            <td><a href="contact.html">Contact</a></td>
+             </tr>
+             <tr>
+              <td>KEYZER</td>
+              <td>Privé</td>
+              <td>Industrie</td>
+              <td>Germany</td>
+              <td>keyzer@gmbh.com</td>
+              <td>n/a</td>
+              <td>n/a</td>
+              <td><a href="contact.html">Contact</a></td>
+               </tr>
+        </table>
+      </section>
+
+      <footer>
+        <a href="">Plan du site</a>
+        <a href="">Information Légale</a>
+        <a href="">Webmaster</a>
+        <a href="">FAQ</a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

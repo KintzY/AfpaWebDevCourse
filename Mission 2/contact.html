@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABI, Active Bretagne Informatique,Sandra</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+        <header>
+            <div class="navbar">
+              <img class="logo" src="ABI-Logo.png" alt="Logo ABI" />
+              <div class="navbar-right">
+                <a href="#home">Accueil</a>
+                <a href="#project">Projets</a>
+                <a href="#collab">Collaborateurs</a>
+                <div class="dropdown">
+                  <a href="#manage">Commerciale</a>
+                  <div class="dropdown-content">
+                    <a href="gestion.html">Gestion Client</a>
+                    <a href="client.html">Liste des clients</a>
+                    <a class="active" href="contact.html">Contact Clients</a>
+                  </div>
+                </div>
+    
+                <div class="dropdown">
+                  <a href="#about">A Propos</a>
+                  <div class="dropdown-content">
+                    <a href="#news">Actualité</a>
+                    <a href="#contact">Contact</a>
+                  </div>
+                </div>
+    
+                <div class="login-container">
+                  <form>
+                    <input type="email" placeholder="Adresse mail" name="username" />
+                    <input type="password" placeholder="Mot de passe" name="psw" />
+                    <button type="submit">Login</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </header>
+
+      <section class="main-section">
+        <h1 class="title-list">Liste Des Contacts Clients</h1>
+        <input type="text" id="search-table" placeholder="Chercher dans la liste" />
+        <button id="button-add">Ajouter contact</button>
+        <table id="customers">
+          <thead>
+            <tr>
+              <th>Client</th>
+              <th>Nom Prénom</th>
+              <th>Adresse</th>
+              <th>Code postal</th>
+              <th>ville</th>
+              <th>Téléphone</th>
+              <th>email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ACME INC.</td>
+              <td>NIXON Tiger</td>
+              <td>36 bd Gallieni</td>
+              <td>94130</td>
+              <td>Nogent sur marne</td>
+              <td>01.48.73.37.97</td>
+              <td><a href="mailto:tiger.nixon@orange.fr">tiger.nixon@orange.fr</a></td>
+            </tr>
+            <tr>
+              <td>CALUMET</td>
+              <td>WINTERS Garrett</td>
+              <td>20 rue Pontier</td>
+              <td>77500</td>
+              <td>Chelles</td>
+              <td>01.48.83.45.44</td>
+              <td><a href="mailto:garrett.winters@gmail.com">garrett.winters@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td>KEYZER</td>
+              <td>COX Ashton</td>
+              <td>5 av Champion</td>
+              <td>75010</td>
+              <td>Paris</td>
+              <td>06.60.56.76.16</td>
+              <td><a href="ashton.cox@laposte.net">ashton.cox@laposte.net</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>KELLY Cedric</td>
+              <td>65 rue Parmentier</td>
+              <td>94130</td>
+              <td>Nogent sur marne</td>
+              <td>06.81.31.17.04</td>
+              <td><a href="cedric.kelly@orange.fr">cedric.kelly@orange.fr</a></td>
+            </tr>
+            <tr>
+              <td>CALUMET</td>
+              <td>SATOU Airi</td>
+              <td>2 rue marchand</td>
+              <td>77500</td>
+              <td>Chelles</td>
+              <td>01.48.73.30.72</td>
+              <td><a href="airi.satou@gmail.com">airi.satou@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>WILLIAMSON Brielle</td>
+              <td>2 av Gugnon</td>
+              <td>75001</td>
+              <td>Paris</td>
+              <td>01.43.94.12.74</td>
+              <td><a href="brielle.williamson@laposte.net">brielle.williamson@laposte.net</a></td>
+            </tr>
+            <tr>
+              <td>KEYZER</td>
+              <td>HERROD Chandler</td>
+              <td>4 place Leclerc</td>
+              <td>94130</td>
+              <td>Nogent sur marne</td>
+              <td>01.48.73.64.45</td>
+              <td><a href="herrod.chandler@free.fr">herrod.chandler@free.fr</a></td>
+            </tr>
+
+            <tr>
+              <td>CALUMET</td>
+              <td>DAVIDSON Rhona</td>
+              <td>2 rue de la prairie</td>
+              <td>94170</td>
+              <td>Le perreux sur marne</td>
+              <td>01.48.81.55.81</td>
+              <td><a href="rhona.davidson@orange.fr">rhona.davidson@orange.fr</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>HURST Colleen</td>
+              <td>3 rue Dagobert</td>
+              <td>94170</td>
+              <td>Le perreux sur marne</td>
+              <td>01.48.75.49.12</td>
+              <td><a href="colleen.hurst@free.fr">colleen.hurst@free.fr</a></td>
+            </tr>
+            <tr>
+              <td>CALUMET</td>
+              <td>FROST Sonya</td>
+              <td>12 rue des pinsons</td>
+              <td>77360</td>
+              <td>Vaires sur marne</td>
+              <td>01.60.08.56.67</td>
+              <td><a href="sonya.frost@sfr.fr">sonya.frost@sfr.fr</a></td>
+            </tr>
+            <tr>
+              <td>KEYZER</td>
+              <td>GAINES Jena</td>
+              <td>1 av beausejour</td>
+              <td>77500</td>
+              <td>Chelles</td>
+              <td>06.57.41.23.11</td>
+              <td>j<a href="jena.gaines@orange.fr">jena.gaines@orange.fr</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>QUINN Flynn</td>
+              <td>4 place marchande</td>
+              <td>77400</td>
+              <td>Lagny sur marne</td>
+              <td>01.41.77.88.99</td>
+              <td><a href="flynn.quinn@free.fr">flynn.quinn@free.fr</a></td>
+            </tr>
+            <tr>
+              <td>CALUMET</td>
+              <td>CHARDE Marshall</td>
+              <td>5 rue de la mairie</td>
+              <td>94170</td>
+              <td>Le perreux sur marne</td>
+              <td>07.11.35.68.49</td>
+              <td><a href="marshall.charde@afpa.fr">marshall.charde@afpa.fr</a></td>
+            </tr>
+            <tr>
+              <td>KEYZER</td>
+              <td>KENNEDY Hally</td>
+              <td>15 av Foch</td>
+              <td>77500</td>
+              <td>Chelles</td>
+              <td>01.60.08.76.66</td>
+              <td><a href="hally.kennedy@gmail.com">hally.kennedy@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td>CALUMET</td>
+              <td>FITZPATRICK Tatyana</td>
+              <td>20 rue des mesanges</td>
+              <td>77360</td>
+              <td>Vaires sur marne</td>
+              <td>01.41.99.64.13</td>
+              <td><a href="tatyana.fitzpatrick@laposte.net">tatyana.fitzpatrick@laposte.net</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>SILVA Michael</td>
+              <td>12 rue Thiers</td>
+              <td>75004</td>
+              <td>Paris</td>
+              <td>01.48.73.47.55</td>
+              <td><a href="michael.silva@orange.fr">michael.silva@orange.fr</a></td>
+            </tr>
+            <tr>
+              <td>KEYZER</td>
+              <td>BYRD Paul</td>
+              <td>22 rue du bel air</td>
+              <td>75012</td>
+              <td>Paris</td>
+              <td>01.41.95.15.15</td>
+              <td><a href="paul.byrd@afpa.fr">paul.byrd@afpa.fr</a></td>
+            </tr>
+            <tr>
+              <td>CALUMET</td>
+              <td>LITTLE Gloria</td>
+              <td>9 rue Anquetil</td>
+              <td>94130</td>
+              <td>Nogent sur marne</td>
+              <td>01.57.02.24.50</td>
+              <td><a href="gloria.little@gmail.com">gloria.little@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>GREER Bradley</td>
+              <td>7 rue Doumer</td>
+              <td>75007</td>
+              <td>Paris</td>
+              <td>01.43.24.51.91</td>
+              <td><a href="bradley.greer@sfr.fr">bradley.greer@sfr.fr</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>DAI Rios</td>
+              <td>147 bd de strasbourg</td>
+              <td>94170</td>
+              <td>Le perreux sur marne</td>
+              <td>06.81.40.28.61</td>
+              <td><a href="rios.dai@laposte.net">rios.dai@laposte.net</a></td>
+            </tr>
+            <tr>
+              <td>KEYZER</td>
+              <td>CALWELL Janette</td>
+              <td>28 bd Gambetta</td>
+              <td>77400</td>
+              <td>Lagny sur marne</td>
+              <td>06.23.17.10.90</td>
+              <td><a href="janette.calwell@orange.fr">janette.calwell@orange.fr</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>BERRY Yuri</td>
+              <td>8 bis rue Hoche</td>
+              <td>77360</td>
+              <td>Vaires sur marne</td>
+              <td>06.61.54.35.16</td>
+              <td><a href="yuri.berry@orange.fr">yuri.berry@orange.fr</a></td>
+            </tr>
+            <tr>
+              <td>KEYZER</td>
+              <td>CAESAR Vince</td>
+              <td>4 quai du port</td>
+              <td>77500</td>
+              <td>Chelles</td>
+              <td>0953043050</td>
+              <td><a href="vince.caesar@gmail.com">vince.caesar@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td>CALUMET</td>
+              <td>WILDER Doris</td>
+              <td>36 rue Carnot</td>
+              <td>75006</td>
+              <td>Paris</td>
+              <td>06.77.77.22.14</td>
+              <td><a href="doris.wilder@orange.fr">doris.wilder@orange.fr</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>RAMOS Angelica</td>
+              <td>30 rue kable</td>
+              <td>94130</td>
+              <td>Nogent sur marne</td>
+              <td>01.43.24.66.11</td>
+              <td><a href="angelica.ramos@laposte.net">angelica.ramos@laposte.net</a></td>
+            </tr>
+            <tr>
+              <td>KEYZER</td>
+              <td>JOYCE Gavin</td>
+              <td>1 rue Bert</td>
+              <td>77400</td>
+              <td>Lagny sur marne</td>
+              <td>01.84.04.00.11</td>
+              <td><a href="gavin.joyce@gmail.com">gavin.joyce@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td>CALUMET</td>
+              <td>CHANG Jennifer</td>
+              <td>2 rue Monnet</td>
+              <td>94170</td>
+              <td>Le perreux sur marne</td>
+              <td>01.43.24.63.21</td>
+              <td><a href="jennifer.chang@gmail.com">jennifer.chang@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td>ACME INC.</td>
+              <td>WAGNER renden</td>
+              <td>11 rue des heros</td>
+              <td>75001</td>
+              <td>Paris</td>
+              <td>01.84.04.01.70</td>
+              <td><a href="renden.wagner@orange.fr">renden.wagner@orange.fr</a></td>
+            </tr>
+            <tr>
+              <td>KEYZER</td>
+              <td>GREEN Fiona</td>
+              <td>26 av de la source</td>
+              <td>77500</td>
+              <td>Chelles</td>
+              <td>09.50.80.67.07</td>
+              <td><a href="fiona.green@sfr.fr">fiona.green@sfr.fr</a></td>
+            </tr>
+            <tr>
+              <td>CALUMET</td>
+              <td>ITOU Shou</td>
+              <td>21 GR</td>
+              <td>75008</td>
+              <td>Paaris</td>
+              <td>06.55.11.44.98</td>
+              <td><a href="shou.itou@gmail.com">shou.itou@gmail.com</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer>
+        <a href="">Plan du site</a>
+        <a href="">Information Légale</a>
+        <a href="">Webmaster</a>
+        <a href="">FAQ</a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
