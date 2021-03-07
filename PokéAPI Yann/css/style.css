@@ -1,0 +1,41 @@
+body {
+	background-color: #455a64;
+}
+
+h1 {
+	text-align: center;
+}
+
+.navbar {
+	background-color: #1c313a;
+	color: #ffffff;
+}
+
+.card {
+	background-color: #b2dfdb;
+	color: #000000;
+}
+
+.card-img-top {
+	background-color: #e5ffff;
+}
+
+#poke-shot {
+	background-color: #e5ffff;
+	width: 300px;
+}
+
+@media (min-width: 1025px) {
+	#poke-card {
+		max-width: 1024px;
+	}
+	#poke-shot {
+		width: 500px;
+	}
+}
+
+@media (max-width: 1025px) {
+	#poke-card {
+		max-width: 640px;
+	}
+}

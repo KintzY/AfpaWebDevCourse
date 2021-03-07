@@ -1,0 +1,10 @@
+Semble correspondre au cahier des charges.
+Attention 'nom_prenomLes règles de gestion manquent de précision et de détails exploitables. Complexes à traduire en associations ou calculs.
+_distribution' dans un même attribuQuelques  petites erreurs constatées. Des doutes quant aux choix des noms d'attributs et des verbes désignant les associations ("emprunter", "vérifier").
+Des questions relatives aux placement de certains atTrès bonne correspondance entre le MCD et le MLD.tributs).
+Malgré nos connaissances naissantes en GBDD, il nous semble que certains aspects manquent de pertinences.
+
+ins
+ok
+ok
+S pro

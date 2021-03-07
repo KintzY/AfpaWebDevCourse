@@ -1,0 +1,58 @@
+
+_________________________________________________
+IMPLEMENTATION
+_________________________________________________
+*** PROFILS   ***
+_________________________________________________
+credentials : id: adherent - pwd: afpa
+DROITS: lecture
+_________________________________________________
+credentials : id: gerant - pwd: videostar
+DROITS: lecture - ecriture
+_________________________________________________
+credentials : id: technicien - pwd: dwwm
+DROITS: lecture - ecriture - (suppression ??)
+_________________________________________________
+_________________________________________________
+
+***   REQUETES INSERT   ***
+-----------------------------------------------------------------------------------------------
+Adherents
+
+(numero_adherent,civilite,nom,prenom,adresse,code_postal,ville,tel,email,credits_restant)
+
+-----------------------------------------------------------------------------------------------
+stars
+
+(nom, prenom)
+
+-----------------------------------------------------------------------------------------------
+documentaires
+
+(code_documentaire, libelle, annee, telechargeable, prix_telechargement)
+
+-----------------------------------------------------------------------------------------------
+exemplaires
+
+(numero_exemplaire, etat)
+
+-----------------------------------------------------------------------------------------------
+lieux
+
+INSERT INTO lieux (nom)
+	VALUES ('Paris'), ('New-York'), ('Washington'), ('Marseille'), ('Los-Angeles'),
+	('Lyon'), ('Chicago'), ('Londre'), ('Berlin'), ('Rome'), ('Madrid'), ('Moscou'),
+	('Pekin'), ('Seoul');
+
+-----------------------------------------------------------------------------------------------
+types_documentaires
+
+INSERT INTO types_documentaires (libelle) 
+	VALUES ('new'),('science-fiction'),('policier'),('thriller'),('comédie'),('action'),('aventure'),
+    ('documentaire'),('frisson'),('animation'),('biopic'),('drame'),('fantastique'),('peplum');
+-----------------------------------------------------------------------------------------------
+supports_physiques
+
+INSERT INTO supports_physiques (libelle, prix_location_journalier) 
+	VALUES ('DVD',3), ('BLU-RAY',4);
+-----------------------------------------------------------------------------------------------

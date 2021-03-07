@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/lg-smart');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/logo-abi-96x96.jpg" alt="Logo d'ABI">
+        </div>
+
+        <div class="title">
+            <h1>ABI - ACTIVE BRETAGNE INFORMATIQUE</h1>
+            <h2>Plateforme numérique 2.0</h2>
+        </div>
+
+    </header>
+    <nav>
+        <ul class="primary-links">
+            <li class="link">
+                <a class="current-page" href="http://127.0.0.1/customer.php">Gestion des contacts commerciaux</a>
+            </li>
+            <li class="link">
+                <a href="http://127.0.0.1/project.php">Gestion des projets</a>
+            </li>
+            <li class="link">
+                <a href="http://127.0.0.1/partner.php">Gestion des collaborateurs</a>
+            </li>
+        </ul>
+    </nav>
+    <aside>
+        <nav>
+            <ul class="secondary-links">
+                <li class="link">
+                    <a class="current-page" href="http://127.0.0.1/customer-list.php">Liste des contacts</a>
+                </li>
+                <li class="link">
+                    <a href="http://127.0.0.1/customer-add.php">Ajout d'un contact</a>
+                </li>
+                <li class="link">
+                    <a href="http://127.0.0.1/customer-modify.php">Modification d'un contact</a>
+                </li>
+                <li class="link">
+                    <a href="http://127.0.0.1/customer-delete.php">Suppression d'un contact</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section class="primary">
+            <h1>Liste des Projets</h1>
+            <table class="center">
+                <tr>
+                    <th>Code Projet<span class="ico action-column-sort" id="sort_customer_id"></span></th>
+                    <th>Abreger Projet<span class="ico action-column-sort" id="sort_customer_name"></span></th>
+                    <th>Nom Projet<span class="ico action-column-sort" id="sort_customer_type"></span></th>
+                    <th>Type Projet<span class="ico action-column-sort" id="sort_customer_domain"></span></th>
+                    <!-- <th>Nature<span class="ico action-column-sort" id="sort_customer_level"></span></th>--> 
+                    <!-- ! Cellule vide pour respecter le format 5 colonnes du tableau -->
+                    <!-- <th></th> -->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <!-- <td></td> -->
+                    <!-- <td class="contact-action"> -->
+                        <!-- ! L'identifiant de l'action "plus d'info" contient le numéro du client -->
+                        <!-- ! L'URL cible de cette action est passée en attribut de stockage de données via l'attribut "maison" data-url -->
+                    <!--     <span class="ico action-more-info" id="CLI230001"
+                            data-url="http://127.0.0.1/customer-detail.php" data-price="25"></span>
+                    </td> -->
+                </tr>
+            </table>
+        </section>
+        <section class="secondary">
+            <h1>Recherche de contact</h1>
+            <form class="quick-form" method="get" action="http://127.0.0.1/customer-search.php">
+                <div class="form-input">
+                    <label for="numero_client">Par numéro client :</label>
+                    <input type="text" name="customer_id" id="numero_client" pattern="^CLI(\d+)$"
+                        placeholder="CLI########">
+                </div>
+                <div>
+                    OU
+                </div>
+                <div class="form-input">
+                    <label>Par raison sociale :
+                        <input type="text" name="customer_name" id="raison_sociale" maxlength="32">
+                    </label>
+                </div>
+                <input type="submit" class="action-search-customer" id="rechercher_client" value="Rechercher">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul class="footer-links">
+                <li class="link">
+                    <a href="http://127.0.0.1/support.php">Support technique</a>
+                </li>
+                <li class="link">
+                    <a href="http://127.0.0.1/intranet.php">Intranet</a>
+                </li>
+                <li class="link">
+                    <a href="http://abi-dwwm.com">Site web public</a>
+                </li>
+                <li class="link">
+                    <a href="http://facebook.com/abi-dwwm/">Facebook</a>
+                </li>
+                <li class="link">
+                    <a href="http://twitter.com/abi-dwwm/">Twitter</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="./js/core.js"></script>
+</body>
+</html>

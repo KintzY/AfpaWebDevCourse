@@ -1,0 +1,536 @@
+/*
+ * Correction type Mission 2
+ * Auteur : Rodolphe
+ * Date : 2000-11
+
+ * Testé uniquement sur Google Chrome 86.0.4240.198
+ */
+
+/*******************************************
+*
+* Reset des styles par défaut
+*
+********************************************/
+
+/* Marges */
+h1,
+h2,
+ul {
+    /* Non standard W3C, spécifique à Google Chrome */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/margin-block-start */
+    margin-block-start: 0;
+    /* Non standard W3C, spécifique à Google Chrome */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/margin-block-end */
+    margin-block-end: 0;
+}
+
+/* Remplissages */
+ul {
+    /* Non standard W3C, spécifique à Google Chrome */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/padding-inline-start */
+    padding-inline-start: 0;
+}
+
+/* Marges */
+body {
+    margin: 0;
+}
+
+/* Mode de calcul de la taille de boîtes (boxes) */
+/* https://css-tricks.com/box-sizing/ */
+body {
+    box-sizing: border-box;
+}
+
+/* Décorations de texte */
+a {
+    text-decoration: none;
+}
+
+/* Elements en bloc */
+li {
+    display: block;
+}
+
+/* Couleur du texte */
+a {
+    color: #ffffff;
+}
+
+/*******************************************
+*
+* Styles généraux
+*
+********************************************/
+
+/* Déclaration d'une police (font) local */
+/* ? https://css-tricks.com/snippets/css/using-font-face/ */
+@font-face {
+    /* Police gratuite "Awesome" de librairie d'icônes */
+    /* ? https://fontawesome.com/icons?d=gallery&m=free */
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    /* IE9 Compat Modes */
+    src: url("../font/fa-solid-900.eot");
+    /* IE6-IE8 */
+    src: url("../font/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+        /* Super Modern Browsers */
+        url("../font/fa-solid-900.woff2") format("woff2"),
+        /* Pretty Modern Browsers */
+        url("../font/fa-solid-900.woff") format("woff"),
+        /* Safari, Android, iOS */
+        url("../font/fa-solid-900.ttf") format("truetype"),
+        /* Legacy iOS */
+        url("../font/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+/* Body */
+body {
+    /* Couleur palette DEEP PURPLE 50 */
+    /* ? https://www.materialpalette.com/colors */
+    background-color: #ede7f6;
+    /* Taille de base de la police */
+    font-size: 15px;
+    /* Police par défaut */
+    font-family: "LG Smart";
+    /* Positionnement en gille (grid layout) */
+    /* ? https://css-tricks.com/snippets/css/complete-guide-grid/ */
+    display: grid;
+    /* Grille à 2 colonnes (fraction 1/9) */
+    grid-template-columns: 1fr 8fr;
+    /* Grille à 5 lignes (fraction 1/17) */
+    grid-template-rows: 1.5fr 1fr 8fr 6fr 0.5fr;
+    /* Espacements des éléments de la grille */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/gap */
+    grid-gap: 0.5rem;
+    /* Barres de défilement (scrollbar) désactivées */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/overflow */
+    overflow: hidden;
+    /* Remplissage */
+    padding: 1rem;
+    /* Plein fenêtre (full viewport) */
+    width: 100vw;
+    height: 100vh;
+}
+
+/*******************************************
+*
+* Styles de la structure (layout)
+*
+********************************************/
+
+/* Enfants directs du body sauf l'élement main */
+/* ? https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+body>*:not(main) {
+    /* Couleur de fond palette DEEP PURPLE 300 */
+    /* ? https://www.materialpalette.com/colors */
+    background-color: #9575cd;
+    /* Effet d'arrondi */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/border-radius */
+    border-radius: 30px;
+    /* Effet d'ombrage */
+    /* ? https://developer.mozilla.org/fr/docs/Apprendre/CSS/Building_blocks/Advanced_styling_effects */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Entête */
+header {
+    /* Commence à la 1ère colonne de la grille */
+    grid-column-start: 1;
+    /* Termine avant la 3ème colonne de la grille */
+    grid-column-end: 3;
+    /* Commence à la 1ère ligne de la grille */
+    grid-row-start: 1;
+    /* Termine avant la 2ème ligne de la grille */
+    grid-row-end: 2;
+    /* Couleur du texte palette DEEP PURPLE 50 */
+    /* ? https://www.materialpalette.com/colors */
+    color: #ede7f6;
+}
+
+/* Navigation principale (enfant direct du body) */
+body>nav {
+    /* Commence à la 1ère colonne de la grille */
+    grid-column-start: 1;
+    /* Termine avant la 3ème colonne de la grille */
+    grid-column-end: 3;
+    /* Commence à la 2ème ligne de la grille */
+    grid-row-start: 2;
+    /* Termine avant la 3ème ligne de la grille */
+    grid-row-end: 3;
+}
+
+/* Contenu principal */
+main {
+    /* Commence à la 2ème colonne de la grille */
+    grid-column-start: 2;
+    /* Termine avant la 3ème colonne de la grille */
+    grid-column-end: 3;
+    /* Commence à la 3ème ligne de la grille */
+    grid-row-start: 3;
+    /* Termine avant la 5ème ligne de la grille */
+    grid-row-end: 5;
+}
+
+/* Elément latéral */
+aside {
+    /* Commence à la 1ère colonne de la grille */
+    grid-column-start: 1;
+    /* Termine avant la 2ème colonne de la grille */
+    grid-column-end: 2;
+    /* Commence à la 3ème ligne de la grille */
+    grid-row-start: 3;
+    /* Termine avant la 5ème ligne de la grille */
+    grid-row-end: 5;
+}
+
+/* Navigation de l'élément latéral */
+aside>nav {
+    /* Ajustement de la hauteur au parent */
+    height: 100%;
+}
+
+/* Pied de page */
+footer {
+    /* Commence à la 1ère colonne de la grille */
+    grid-column-start: 1;
+    /* Termine avant la 3ème colonne de la grille */
+    grid-column-end: 3;
+    /* Commence à la 5ème ligne de la grille */
+    grid-row-start: 5;
+    /* Termine avant la 6ème ligne de la grille */
+    grid-row-end: 6;
+}
+
+/* Titres de sections */
+section>h1 {
+    /* Remplissage haut */
+    padding-top: 0.5rem;
+    /* Taille relative de la police par rapport à l'élément "html" */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/font-size */
+    font-size: 2rem;
+    /* Centrage horizontal */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/text-align */
+    text-align: center;
+}
+
+/* 1er "frère" suivant les titres de sections */
+/* ? https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+section>h1+* {
+    /* Marge haute */
+    margin-top: 1rem;
+}
+
+/* Dernier enfant de sections */
+/* ? https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+section>*:last-child {
+    /* Marge basse */
+    margin-bottom: 1rem;
+}
+
+/* Tableaux */
+table {
+    /* Bordure */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/border */
+    /* Couleur de bordure palette DEEP PURPLE 600 */
+    /* ? https://www.materialpalette.com/colors */
+    border: 0.2rem solid #5e35b1;
+}
+
+/* Ligne d'entête de tableaux (1ère ligne) */
+/* ? https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+tbody> :first-child {
+    /* Couleur de fond palette DEEP PURPLE 500 avec protection contre la surcharge (!important) */
+    /* ? https://www.materialpalette.com/colors */
+    background-color: #673ab7 !important;
+}
+
+/* Lignes de tableaux */
+tr {
+    /* Hauteur */
+    height: 2rem;
+}
+
+/* Cellules de tableaux sauf la dernière */
+/* ? https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+td:not(:last-child) {
+    /* Contraintes de seuils de largeur minimale */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/min-height */
+    min-width: 10rem;
+    /* Remplissage gauche/droite */
+    padding: 0 1rem;
+}
+
+/* Lignes impaires de tableaux (en-tête compris) */
+/* ? https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+tbody> :nth-child(2n+1) {
+    /* Couleur de fond palette DEEP PURPLE 300 */
+    /* ? https://www.materialpalette.com/colors */
+    background-color: #9575cd;
+    /* Couleur du texte palette DEEP PURPLE 50 */
+    /* ? https://www.materialpalette.com/colors */
+    color: #ede7f6;
+}
+
+/* Lignes paires de tableaux */
+/* ? https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+tbody> :nth-child(2n) {
+    /* Couleur de fond palette DEEP PURPLE 200 */
+    /* ? https://www.materialpalette.com/colors */
+    background-color: #b39ddb;
+    /* Couleur du texte palette DEEP PURPLE 50 */
+    /* ? https://www.materialpalette.com/colors */
+    color: #ede7f6;
+}
+
+/* Etiquettes */
+label {
+    /* Taille de la police */
+    font-size: 1.5rem;
+}
+
+/* Champs de formulaire */
+input {
+    /* Effet de bordure */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/border */
+    /* Couleur de bordure palette DEEP PURPLE 600 */
+    /* ? https://www.materialpalette.com/colors */
+    border: 0.2rem solid #5e35b1;
+    border-radius: 25px;
+}
+
+
+
+/* Champs de formulaire invalides */
+/* ? https://developer.mozilla.org/fr/docs/Web/CSS/:invalid */
+input:invalid {
+    /* Couleur de bordure d'erreur */
+    border: 0.2rem solid red;
+}
+
+/* Champs de formulaire sélectionnés */
+/* ? https://developer.mozilla.org/fr/docs/Web/CSS/:focus */
+input:focus {
+    /* Couleur de fond palette DEEP PURPLE 300 */
+    /* ? https://www.materialpalette.com/colors */
+    background-color: #9575cd;
+}
+
+/* Contrôles de validation de formulaire */
+/* ? https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+input[type="submit"] {
+    /* Effet de bordure */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/border */
+    /* Couleur de bordure palette DEEP PURPLE 600 */
+    /* ? https://www.materialpalette.com/colors */
+    border: 0.2rem solid #5e35b1;
+    border-radius: 25px;
+    /* Couleur de fond palette DEEP PURPLE 300 */
+    /* ? https://www.materialpalette.com/colors */
+    background-color: #9575cd;
+    /* Couleur palette DEEP PURPLE 50 */
+    /* ? https://www.materialpalette.com/colors */
+    color: #ede7f6;
+}
+
+/*******************************************
+*
+* Styles des classes
+*
+********************************************/
+
+/* Conteneur des liens principaux */
+.primary-links {
+    /* Adaptation au conteneur */
+    height: 100%;
+    /* Affichage "flexible" */
+    /* ? https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    /* Espacement des enfants */
+    justify-content: space-evenly;
+    /* Centrage vertical des enfants */
+    align-items: center;
+    /* Taille relative de la police par rapport à l'élément "html" */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/font-size */
+    font-size: 1.5rem;
+}
+
+/* Conteneur des liens secondaires */
+.secondary-links {
+    /* Adaptation au conteneur */
+    height: 100%;
+    /* Affiche "flexible" en colonne */
+    /* ? https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    flex-direction: column;
+    /* Espacement des enfants */
+    justify-content: space-evenly;
+    /* Centrage vertical des enfants */
+    align-items: center;
+}
+
+/* Conteneur des liens du pied de page */
+.footer-links {
+    /* Centrage horizontal */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/text-align */
+    text-align: center;
+}
+
+/* Liens du pied de page */
+.footer-links>li {
+    /* Affichage "en ligne" */
+    display: inline;
+    /* Taille de la ligne pour le centrage vertical d'un élément de type "en ligne" */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/line-height */
+    line-height: 2rem;
+    /* Centrage vertical du texte dans la ligne */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/vertical-align */
+    vertical-align: middle;
+    /* Espacement */
+    margin: 0 5rem 0 5rem;
+}
+
+/* Liens */
+.link {
+    /* Conversion en majuscule */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/text-transform */
+    text-transform: uppercase;
+}
+
+/* Ancres de lien */
+.link>a {
+    /* Epaisseur du  texte */
+    font-weight: bold;
+    /* Couleur de texte palette DEEP PURPLE 800 */
+    /* ? https://www.materialpalette.com/colors */
+    color: #4527a0;
+}
+
+/* Liens de la page courante */
+a.current-page {
+    /* Ombrage du texte */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/text-shadow */
+    /* Couleur d'ombrage palette DEEP PURPLE A700 */
+    /* ? https://www.materialpalette.com/colors */
+    text-shadow: 1px 1px 2px #6200ea;
+}
+
+/* Icône */
+/* ? https://developer.mozilla.org/fr/docs/Web/CSS/::after */
+.ico::after {
+    /* Utilisation de la police Awesome */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/font-family */
+    font-family: "Font Awesome 5 Free";
+    /* Contraintes de seuils de taille */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/min-height */
+    min-width: 1.5rem;
+    min-height: 1.2rem;
+    /* Element flottant à droite */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/float */
+    float: right;
+    /* Centrage horizontal */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/text-align */
+    text-align: center;
+}
+
+/* "Après" les colonnes triables */
+.action-column-sort::after {
+    /* Code héxadécimal de l'icône de la police Awesome */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/content */
+    content: "\f0dc";
+}
+
+/* "Après" les actions "plus d'info" */
+/* ? https://developer.mozilla.org/fr/docs/Web/CSS/::before */
+.action-more-info::after {
+    content: "\f05a";
+}
+
+/* Toutes les actions grâce à un motif (pattern) */
+/* ? https://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048 */
+span[class*="action-"] {
+    /* Curseur de la souris */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/cursor */
+    cursor: pointer;
+}
+
+/* Centrage */
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Bloc principal */
+.primary {
+    /* Hauteur de 4/5 du parent */
+    height: 80%;
+    /* Ligne séparatrice du bas (divider) */
+    /* ? https://www.w3schools.com/howto/howto_css_dividers.asp */
+    border-bottom: 2px solid #673ab7;
+    /* Activation des barres de défilement verticales */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/overflow */
+    overflow-y: scroll;
+    /* Marge de haut et de droite pour avoir des barres de défilement "internes" */
+    margin: 1rem 0.5rem 0 0;
+}
+
+/* Bloc secondaire */
+.secondary {
+    /* Hauteur de 1/5 du parent */
+    height: 20%;
+}
+
+/* Bloc titre */
+.title {
+    /* Centrage vertical des titres */
+    /* ? https://css-tricks.com/centering-css-complete-guide/ */
+    padding: 10px 0 10px 0;
+}
+
+/* Bloc logo */
+.logo {
+    /* Positionnement flottant à gauche */
+    float: left;
+    /* Espacement avec le bloc titre */
+    padding-right: 1rem;
+    /* Ajustement à la hauteur de la ligne de la grille */
+    height: 100%;
+    /* Largeur du bloc logo par rapport à son conteneur */
+    width: 10%;
+}
+
+/* Image du logo */
+.logo>img {
+    /* Ajustement de l'image sinon elle est de taille 0 donc invisible */
+    width: 4rem;
+    height: 4rem;
+    /* Marges de positionnement dans le conteneur */
+    margin: 0.5rem 0 0.5rem 5rem;
+    /* Effet visuel d'emporte pièce */
+    /* ? https://developer.mozilla.org/fr/docs/Web/CSS/border-radius */
+    border-radius: 10px 100px / 120px;
+    overflow: hidden;
+}
+
+/* Formulaire "rapide" */
+.quick-form {
+    /* Affichage "flexible" */
+    /* ? https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    /* Espacement des enfants */
+    justify-content: space-evenly;
+    /* Centrage vertical des enfants */
+    align-items: center;
+}
+
+/*******************************************
+*
+* Styles des identifiants
+*
+********************************************/
+
+#raison_sociale {
+    width: 40rem;
+}
