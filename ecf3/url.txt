@@ -1,0 +1,5 @@
+http://localhost/index.php?entity=bien&action=list
+http://localhost/index.php?entity=bien&action=read&code=LOC0001 -> LOC0003
+
+http://localhost/index.php?entity=client&action=list
+http://localhost/index.php?entity=client&action=read&code=CLI0001 -> CLI0003
