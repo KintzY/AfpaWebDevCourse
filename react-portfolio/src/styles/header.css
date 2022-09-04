@@ -1,0 +1,101 @@
+header {
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.header__container {
+  text-align: start;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: var(--container-width-lg);
+  margin: auto;
+  gap: 5%;
+}
+
+.header__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+/* =========== CTA =========== */
+
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  justify-content: right;
+}
+
+/* =========== SOCIALS =========== */
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 3%;
+  top: 35%;
+  bottom: 3rem;
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/* =========== AVATAR =========== */
+
+.avatar {
+  background: linear-gradient(var(--color-primary-variant), transparent);
+  width: 22rem;
+  height: 30rem;
+  position: inherit;
+  left: calc(50% - 11rem);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  /* overflow: hidden; */
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  /* transform: scaleX(-1); */
+}
+
+/* ================ MEDIA QUERIES MEDIUM ================ */
+
+@media screen and (max-width: 1024px) {
+  
+  .header__container {
+    text-align: center;
+    display: inherit;
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ================ MEDIA QUERIES SMALL ================ */
+
+@media screen and (max-width: 600px) {
+  header {
+    padding-top: 3rem;
+  }
+
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+}

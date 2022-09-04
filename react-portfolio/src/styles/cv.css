@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");
+
+.container__cv * {
+  margin: revert;
+  padding: revert;
+  border: revert;
+  outline: revert;
+  box-sizing: revert;
+  list-style: revert;
+  text-decoration: revert;
+}
+
+body .container__cv {
+  padding: 0;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: black;
+}
+
+.container__cv a {
+  text-decoration: none;
+  color: unset;
+  font-weight: inherit;
+}
+
+.container__cv li {
+  font-size: 0.9em;
+}
+
+.container__cv {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 30px auto 64px auto;
+  box-shadow: -37px 67px 96px -20px #6d6d6d;
+  border-radius: 3px;
+  overflow: hidden;
+  max-width: 968px;
+}
+
+.section {
+  padding: 10px;
+}
+
+.section-main {
+  display: flex;
+  height: 30px;
+  margin-bottom: 25px;
+}
+
+.section-header {
+  color: #1492b6;
+  font-weight: 700;
+  margin: 0 0 0 20px;
+}
+
+.info .section-main {
+  display: flex;
+}
+
+.info .section-header {
+  color: #1492b6;
+  margin: 0 0 0 10px;
+  line-height: 28px;
+  display: inline-block;
+}
+
+.info {
+  /* display: flex;
+	flex-direction: column;
+	align-items: center; */
+  flex: 1;
+  padding: 40px 40px;
+  background: #3a393e;
+}
+
+.info-picture {
+  width: 104px;
+  margin: 0 auto;
+}
+
+.info .about {
+  /* display: flex;
+	flex-wrap: wrap; */
+  margin-top: 60px;
+  color: #7c7b80;
+}
+
+.info .contact {
+  color: #7c7b80;
+  margin-top: 50px;
+}
+
+.contact-item span:first-child {
+  display: block;
+  font-weight: 800;
+}
+
+.details {
+  flex: 3;
+  padding: 10px;
+  background: #eae8eb;
+  padding: 40px 50px 25px 30px;
+}
+
+.name {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #eae8eb;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.07em;
+  color: #1492b6;
+  text-transform: uppercase;
+}
+
+.frame {
+  position: relative;
+  width: 90px;
+  height: 125px;
+  justify-content: center;
+  display: inline-block;
+}
+
+.frame::before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 80px;
+  width: 80px;
+  border: 1.5px solid #1492b6;
+  transform: rotateZ(45deg);
+  /* margin-top: 20px; */
+}
+
+.frame::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 80px;
+  width: 80px;
+  border: 1.8px solid #1492b6;
+  transform: rotateZ(45deg);
+  margin-left: 20px;
+  /* margin-top: 20px; */
+}
+
+.frame--small {
+  width: 35px;
+  height: 32px;
+}
+
+.frame--small::before {
+  height: 20px;
+  width: 20px;
+  /* margin-top: 2px; */
+  border-width: 1px;
+}
+
+.frame--small::after {
+  height: 20px;
+  width: 20px;
+  margin-left: 6px;
+  /* margin-top: 2px; */
+  border-width: 1px;
+}
+
+.frame--small span {
+  position: absolute;
+  line-height: 23px;
+  color: #1492b6;
+  /* padding: 6px 0 0 0; */
+  font-weight: 800;
+  font-size: 0.89em;
+  /* margin-left: 5px; */
+  text-align: center;
+  width: 26px;
+}
+
+.division-header li {
+  margin-bottom: 5px;
+  line-height: 1.1em;
+}
+
+.division-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.division-main-date {
+  border-right: 2px solid #3d3d3f;
+  padding: 7px 20px 7px 10px;
+  margin-right: 20px;
+  min-width: 108px;
+}
+
+.division-main-position {
+  display: flex;
+  flex-direction: column;
+}
+
+.division-main-position span:first-child {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.division-main-position span:not(first-child) {
+  font-size: 0.89em;
+}
+
+.division-content {
+  letter-spacing: 0;
+  font-size: 0.89em;
+}
+
+.work-skills ul {
+  /* column-count: 3; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
+}
+
+.work-skills li {
+  flex-shrink: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  min-width: 190px;
+}
+
+.work-skills li::before {
+  content: "\2022";
+  color: #1492b6;
+  line-height: 0.5em;
+  font-weight: 800;
+  font-size: 28px;
+  margin: 0 10px;
+  display: inline-block;
+  /* width: 5px; */
+}
+
+.pencil {
+  position: absolute;
+  height: 500px;
+  width: 258px;
+  right: 0;
+  display: inline-block;
+  background: url(https://careers.gvc-plc.com/wp-content/uploads/revslider/career-cta/pencil1.png)
+    no-repeat center center;
+  margin-top: 230px;
+}
+
+.photo-wrapper {
+  width: 66px;
+  height: 66px;
+  top: 9px;
+  left: 19px;
+  position: absolute;
+  overflow: hidden;
+  transform: rotateZ(45deg);
+  background-color: #848484;
+}
+
+.photo {
+  content: "";
+  width: 71px;
+  display: block;
+  margin-left: 0px;
+  left: 0;
+  margin-top: 0px;
+  transform: rotateZ(-45deg);
+}
+
+@media (max-width: 1024px) {
+  .container__cv {
+    margin: 0;
+    max-width: unset;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .division-main-date {
+    border: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .work-skills ul {
+    max-height: 120px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  .work-skills ul {
+    max-height: 120px;
+    flex-direction: column;
+  }
+  nav {
+    display: none;
+  }
+  .container__cv{
+    height: 80%;
+  }
+}

@@ -1,0 +1,64 @@
+nav {
+  background: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  display: block;
+  padding: 0.7rem .7rem;
+  z-index: 2;
+  position: fixed;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.1rem;
+}
+
+nav a:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+nav a.active{
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/* ======= MEDIA QUERIES ======= */
+
+@media screen and (min-width: 1024px) {
+  nav {
+    top: 35%;
+    right: 3%;
+    flex-direction: column;
+  }
+  nav a {
+    padding: 0.9rem ;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  nav {
+    flex-direction: row;
+    left: 50%;
+    bottom: 2rem;
+  }
+  @media (orientation: landscape) {
+    nav {
+      flex-direction: column;
+      top: 7%;
+      right: 1%;
+      left: unset;
+      bottom: unset;
+    }
+    nav a {
+      padding: 0.9rem;
+    }
+  }
+}
